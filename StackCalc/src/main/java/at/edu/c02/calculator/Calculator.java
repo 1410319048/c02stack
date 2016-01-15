@@ -4,7 +4,7 @@ package at.edu.c02.calculator;
 public interface Calculator {
 
 	enum Operation {
-		add, sub, mul, div
+		add, sub, mul, div, mod // mod hinzugefügt durch A-Team
 	};
 
 	void push(double value);
