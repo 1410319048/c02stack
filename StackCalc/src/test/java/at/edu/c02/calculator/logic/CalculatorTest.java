@@ -23,7 +23,7 @@ public class CalculatorTest {
 		assertEquals(5, result, 0);
 
 	}
-	
+
 	@Test
 	public void testSimpleMulOperation() throws Exception {
 
@@ -35,7 +35,7 @@ public class CalculatorTest {
 		assertEquals(6, result, 0);
 
 	}
-	
+
 	@Test
 	public void testSimpleDivOperation() throws Exception {
 
@@ -71,6 +71,18 @@ public class CalculatorTest {
 			assertEquals("Division by zero", e.getMessage());
 			// e.getCause()
 		}
+
+	}
+
+	@Test
+	public void testSimpleModuloOperation() throws Exception {
+
+		Calculator calc = new CalculatorImpl();
+		calc.push(7);
+		calc.push(2);
+		double result = calc.perform(Operation.mod);
+
+		assertEquals(1, result, 0);
 
 	}
 }
